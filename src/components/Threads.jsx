@@ -54,7 +54,7 @@ float pixel(float count, vec2 resolution) {
 
 float lineFn(vec2 st, float width, float perc, float offset, vec2 mouse, float time, float amplitude, float distance) {
     float split_offset = (perc * 0.2);
-    float split_point = -0.15 + split_offset;
+    float split_point = -0.12 + split_offset;
  
     float amplitude_normal = smoothstep(split_point, 0.7, st.x);
     float amplitude_strength = 0.5;

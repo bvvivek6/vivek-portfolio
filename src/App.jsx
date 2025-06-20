@@ -24,7 +24,7 @@ const App = () => {
       className="relative w-full h-screen "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <motion.div
         className="h-full w-full absolute inset-0 z-0"
@@ -85,7 +85,7 @@ const App = () => {
                 transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
               >
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/bvvivek6"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -97,7 +97,7 @@ const App = () => {
                   />
                 </a>
                 <a
-                  href="https://behance.net/"
+                  href="https://www.behance.net/vivekbv2"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Behance"
@@ -109,7 +109,7 @@ const App = () => {
                   />
                 </a>
                 <a
-                  href="https://linkedin.com/"
+                  href="https://www.linkedin.com/in/vivekbv2406"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -121,7 +121,7 @@ const App = () => {
                   />
                 </a>
                 <a
-                  href="https://instagram.com/"
+                  href="https://instagram.com/vivekbv__"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
