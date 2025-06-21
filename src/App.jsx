@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Entry from "./components/Entry";
 import Threads from "./components/Threads";
 import Filters from "./components/Filters";
-import Grid from "./components/Grid";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Resume from "./Resume";
-import { HiChevronRight } from "react-icons/hi";
 import JumpToSection from "./components/JumpToSection";
 
 const sections = [
@@ -30,22 +28,16 @@ const sections = [
 ];
 
 const App = () => {
-  const [showNotif, setShowNotif] = useState(true);
   const scrollRef = React.useRef();
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowNotif(false), 3500);
-    return () => clearTimeout(timer);
-  }, []);
 
   //skip to section handler
   const handleJump = (key) => {
     const idx = sections.findIndex((s) => s.key === key);
     if (idx !== -1 && scrollRef.current) {
       const scrollContainer = scrollRef.current;
-      const sectionWidth = scrollContainer.offsetWidth;
+      const sectionHeight = scrollContainer.offsetHeight;
       scrollContainer.scrollTo({
-        left: idx * sectionWidth,
+        top: idx * sectionHeight,
       });
     }
   };
@@ -61,28 +53,22 @@ const App = () => {
       <JumpToSection onJump={handleJump} />
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
-        {showNotif && (
-          <div className="fixed top-6 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center w-[55vw] md:w-[15vw] gap-2 px-2 py-1 tracking-tight rounded-full backdrop-blur border border-gray-300   text-gray-700 text-sm font-medium  animate-fadein animate-retract">
-            <HiChevronRight size={20} />
-            Swipe left to know more
-          </div>
-        )}
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
           <div
             ref={scrollRef}
-            className="relative z-10 flex-1 flex flex-row items-center justify-start h-full overflow-y-hidden overflow-x-auto scrollbar-hide snap-x snap-proximity scroll-smooth"
+            className="relative z-10 flex-1 flex flex-col items-center justify-start w-full h-full overflow-x-hidden overflow-y-auto scrollbar-hide snap-y snap-proximity scroll-smooth"
             style={{
-              scrollSnapType: "x proximity",
+              scrollSnapType: "y mandatory",
               WebkitOverflowScrolling: "touch",
-              width: "100vw",
-              minWidth: 0,
+              height: "100vh",
+              minHeight: 0,
             }}
           >
             {sections.map((sectionObj) => (
               <div
                 key={sectionObj.key}
                 className="flex flex-col items-center justify-center w-full h-full snap-center transition-transform duration-300 p-4"
-                style={{ flex: "0 0 100vw", minWidth: 0, maxWidth: "100vw" }}
+                style={{ flex: "0 0 100vh", minHeight: 0, maxHeight: "100vh" }}
               >
                 {sectionObj.content}
               </div>
