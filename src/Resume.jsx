@@ -5,7 +5,7 @@ const Resume = () => {
     <div>
       {" "}
       <div className="flex flex-col items-center dm-sans tracking-tight justify-center h-full">
-        <h2 className="text-2xl font-light tracking-tight mb-4 text-gray-900">
+        <h2 className="text-2xl font-light font-sans tracking-tight text-gray-900 self-center">
           Resume
         </h2>
         <a
