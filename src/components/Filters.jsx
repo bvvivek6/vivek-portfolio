@@ -15,7 +15,7 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
     <div>
       {" "}
       <motion.div
-        className={`fixed top-6 right-6 z-50 flex items-center h-10 bg-white/10 backdrop-blur-lg shadow-inner border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
+        className={`fixed top-6 right-6 z-100 flex items-center h-10 bg-white/10 backdrop-blur-lg shadow-inner border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
         initial={false}
         animate={{
           width: open ? 190 : 40,
@@ -71,7 +71,7 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
       {/* Overlay Filter */}
       {filterIdx !== 0 && (
         <div
-          className={`pointer-events-none fixed inset-0 z-100 transition-all duration-300 ${filters[filterIdx].className}`}
+          className={`pointer-events-none fixed inset-0 z-75 transition-all duration-300 ${filters[filterIdx].className}`}
         ></div>
       )}
     </div>
