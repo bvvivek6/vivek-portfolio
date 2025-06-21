@@ -1,9 +1,17 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaBehance } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaBehance,
+  FaPalette,
+  FaArrowRight,
+} from "react-icons/fa";
+import { HiChevronRight } from "react-icons/hi";
 import BlurText from "./components/BlurText";
 import Threads from "./components/Threads";
-import Skills from "./components/Skills";
+import Filters from "./components/Filters";
+import Grid from "./Grid";
 
 const textVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -21,26 +29,13 @@ const textVariants = {
 const App = () => {
   return (
     <motion.div
-      className="relative w-full h-screen "
+      className="relative w-full h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <motion.div
-        className="h-full w-full absolute inset-0 z-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.45 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        style={{
-          backgroundImage: `
-              repeating-linear-gradient(0deg, transparent, transparent 37px, #bfc2c750 37px, #bfc2c750 39px, transparent 39px, transparent 76px),
-              repeating-linear-gradient(90deg, transparent, transparent 37px, #bfc2c750 37px, #bfc2c750 39px, transparent 39px, transparent 76px)
-            `,
-          backgroundSize: "40px 40px",
-          backgroundColor: "#fff",
-          pointerEvents: "none",
-        }}
-      ></motion.div>
+      <Filters />
+      <Grid />
       <div className="relative dvh items-center justify-center overflow-hidden font-grotesk flex flex-col">
         <main className="flex items-center justify-center  relative w-full">
           <motion.div
@@ -151,7 +146,6 @@ const App = () => {
           />
         </div>
       </div>
-      {/* <Skills /> */}
     </motion.div>
   );
 };
