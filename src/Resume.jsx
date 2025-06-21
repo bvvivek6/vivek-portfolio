@@ -5,7 +5,7 @@ const Resume = () => {
     <div>
       {" "}
       <div className="flex flex-col items-center dm-sans tracking-tight justify-center h-full">
-        <h2 className="text-2xl font-light mb-4">Resume</h2>
+        <h2 className="text-2xl font-light tracking-tight mb-4">Resume</h2>
         <a
           href="/bvvivek_resume_019.pdf"
           target="_blank"
