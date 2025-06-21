@@ -19,7 +19,7 @@ const Filters = () => {
     <div>
       {" "}
       <motion.div
-        className={`fixed top-4 right-4 z-50 flex items-center h-10 bg-white/10 backdrop-blur-lg border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
+        className={`fixed top-6 right-6 z-50 flex items-center h-10 bg-white/10 backdrop-blur-lg border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
         initial={false}
         animate={{
           width: open ? 190 : 40,
@@ -57,7 +57,7 @@ const Filters = () => {
               {filters.map((f, i) => (
                 <button
                   key={f.name}
-                  className={`w-5 h-5 rounded-full transition-all duration-200 outline-none  ${
+                  className={`w-5 h-5 rounded-full transition-all duration-200 cursor-pointer outline-none  ${
                     f.color
                   } ${filterIdx === i ? "ring-2 ring-indigo-600 " : ""}`}
                   aria-label={f.name}

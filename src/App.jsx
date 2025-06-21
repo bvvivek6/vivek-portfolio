@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Resume from "./Resume";
 import { HiChevronRight } from "react-icons/hi";
+import JumpToSection from "./components/JumpToSection";
 
 const sections = [
   {
@@ -30,11 +31,24 @@ const sections = [
 
 const App = () => {
   const [showNotif, setShowNotif] = useState(true);
+  const scrollRef = React.useRef();
 
   useEffect(() => {
     const timer = setTimeout(() => setShowNotif(false), 3500);
     return () => clearTimeout(timer);
   }, []);
+
+  //skip to section handler
+  const handleJump = (key) => {
+    const idx = sections.findIndex((s) => s.key === key);
+    if (idx !== -1 && scrollRef.current) {
+      const scrollContainer = scrollRef.current;
+      const sectionWidth = scrollContainer.offsetWidth;
+      scrollContainer.scrollTo({
+        left: idx * sectionWidth,
+      });
+    }
+  };
 
   return (
     <motion.div
@@ -44,8 +58,9 @@ const App = () => {
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <Filters />
-      {/* <Grid /> */}
-      <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col">
+      <JumpToSection onJump={handleJump} />
+
+      <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
         {showNotif && (
           <div className="fixed top-6 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center w-[55vw] md:w-[15vw] gap-2 px-2 py-1 tracking-tight rounded-full backdrop-blur border border-gray-300   text-gray-700 text-sm font-medium  animate-fadein animate-retract">
             <HiChevronRight size={20} />
@@ -54,9 +69,10 @@ const App = () => {
         )}
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
           <div
-            className="relative z-10 flex-1 flex flex-row items-center justify-start  h-full overflow-y-hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            ref={scrollRef}
+            className="relative z-10 flex-1 flex flex-row items-center justify-start h-full overflow-y-hidden overflow-x-auto scrollbar-hide snap-x snap-proximity scroll-smooth"
             style={{
-              scrollSnapType: "x mandatory",
+              scrollSnapType: "x proximity",
               WebkitOverflowScrolling: "touch",
               width: "100vw",
               minWidth: 0,
