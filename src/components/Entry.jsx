@@ -19,7 +19,7 @@ const Entry = () => {
     <>
       <h1 className="w-full flex flex-col items-center text-center font-extralight font-sans tracking-tight leading-tight text-gray-900">
         <motion.span
-          className="block text-4xl font-light mb-3 w-full"
+          className="block text-4xl font-light mb-2 w-full"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -30,18 +30,18 @@ const Entry = () => {
             delay={200}
             animateBy="words"
             direction="top"
-            className="text-3xl text-center mb-2 w-full justify-center"
+            className="text-3xl text-center font-sans tracking-tight  w-full justify-center"
           />
         </motion.span>
         <motion.span
-          className="block md:text-2xl text-xl text-center tracking-tight leading-tight"
+          className="block md:text-2xl text-lg md:w-2xl font-sans text-center tracking-tight leading-tight"
           variants={textVariants}
           initial="hidden"
           animate="visible"
           custom={2}
         >
-          Bridging design and code as a UI/UX designer turned developer,
-          <br /> I craft seamless user experiences with clean, functional code.
+          Bridging design and code as a UI/UX designer turned developer, I craft
+          seamless user experiences with clean, functional code.
         </motion.span>
       </h1>
       <div className="flex justify-start">
