@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiChevronRight } from "react-icons/hi";
 import { FaPalette } from "react-icons/fa";
@@ -11,22 +10,19 @@ const filters = [
   { name: "Pinkish", className: "bg-pink-100/40", color: "bg-pink-400" },
 ];
 
-const Filters = () => {
-  const [filterIdx, setFilterIdx] = useState(0);
-  const [open, setOpen] = useState(false);
-  const toggleMenu = () => setOpen((v) => !v);
+const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
   return (
     <div>
       {" "}
       <motion.div
-        className={`fixed top-6 right-6 z-50 flex items-center h-10 bg-white/10 backdrop-blur-lg border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
+        className={`fixed top-6 right-6 z-50 flex items-center h-10 bg-white/10 backdrop-blur-lg shadow-inner border border-gray-200  rounded-full overflow-hidden cursor-pointer`}
         initial={false}
         animate={{
           width: open ? 190 : 40,
           transition: {
             type: "spring",
             stiffness: 260,
-            damping: 24,
+            damping: 26,
           },
         }}
         onClick={toggleMenu}
@@ -64,7 +60,7 @@ const Filters = () => {
                   onClick={(e) => {
                     e.stopPropagation();
                     setFilterIdx(i);
-                    setOpen(false);
+                    open(false);
                   }}
                 />
               ))}
@@ -75,7 +71,7 @@ const Filters = () => {
       {/* Overlay Filter */}
       {filterIdx !== 0 && (
         <div
-          className={`pointer-events-none fixed inset-0 z-40 transition-all duration-300 ${filters[filterIdx].className}`}
+          className={`pointer-events-none fixed inset-0 z-100 transition-all duration-300 ${filters[filterIdx].className}`}
         ></div>
       )}
     </div>

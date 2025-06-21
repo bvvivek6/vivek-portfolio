@@ -5,9 +5,10 @@ import Threads from "./components/Threads";
 import Filters from "./components/Filters";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import Resume from "./Resume";
+import Resume from "./components/Resume";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
+import { useState } from "react";
 
 const sections = [
   {
@@ -30,6 +31,20 @@ const sections = [
 
 const App = () => {
   const scrollRef = React.useRef();
+  const [filterIdx, setFilterIdx] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const toggleMenu = () => setOpen((v) => !v);
+
+  //check window size
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //skip to section handler
   const handleJump = (key) => {
@@ -50,9 +65,25 @@ const App = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <Filters />
+      <Filters
+        filterIdx={filterIdx}
+        setFilterIdx={setFilterIdx}
+        open={open}
+        toggleMenu={toggleMenu}
+      />
       <JumpToSection onJump={handleJump} />
       <Grid />
+      <div
+        className={`absolute top-6 left-24 sm:left-32 md:left-1/2 transform md:-translate-x-1/2 h-10 rounded-full overflow-visible border-gray-200
+    ${
+      open && isMobile
+        ? "w-[64px]"
+        : "w-[50vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]"
+    }
+    flex  z-20 px-4 py-2 justify-center  border backdrop-blur-md shadow-inner text-gray-900 font-sans text-sm  tracking-tight transition-all duration-300`}
+      >
+        <div className="overflow-hidden ">Lines. Layers. Space.</div>
+      </div>
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
