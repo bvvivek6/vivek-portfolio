@@ -54,7 +54,7 @@ const App = () => {
         )}
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
           <div
-            className="relative z-10 flex-1 flex flex-row items-center justify-start  h-full  overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            className="relative z-10 flex-1 flex flex-row items-center justify-start  h-full overflow-y-hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory"
             style={{
               scrollSnapType: "x mandatory",
               WebkitOverflowScrolling: "touch",

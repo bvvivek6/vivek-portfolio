@@ -17,7 +17,7 @@ const textVariants = {
 const Entry = () => {
   return (
     <>
-      <h1 className="w-full flex flex-col items-center text-center font-extralight font-sans tracking-tight leading-tight text-gray-900">
+      <h1 className="w-full flex flex-col items-center text-center font-extralight  font-sans tracking-tight leading-tight text-gray-900">
         <motion.span
           className="block text-4xl font-light mb-2 w-full"
           variants={textVariants}
