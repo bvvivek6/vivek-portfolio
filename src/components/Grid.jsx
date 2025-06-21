@@ -11,14 +11,13 @@ const Grid = () => {
         animate={{ opacity: 0.45 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         style={{
-          maskImage: "linear-gradient(to bottom, black 30%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, black 30%, transparent 100%)",
+          maskImage: "none",
+          WebkitMaskImage: "none",
           backgroundImage: `
               repeating-linear-gradient(0deg, transparent, transparent 37px, #bfc2c730 37px, #bfc2c730 39px, transparent 39px, transparent 76px),
               repeating-linear-gradient(90deg, transparent, transparent 37px, #bfc2c730 37px, #bfc2c730 39px, transparent 39px, transparent 76px)
             `,
-          backgroundSize: "40px 40px, 40px 40px",
+          backgroundSize: "40px 40px",
           pointerEvents: "none",
         }}
       ></motion.div>

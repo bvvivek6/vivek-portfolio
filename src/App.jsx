@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Resume from "./Resume";
 import JumpToSection from "./components/JumpToSection";
+import Grid from "./components/Grid";
 
 const sections = [
   {
@@ -51,6 +52,7 @@ const App = () => {
     >
       <Filters />
       <JumpToSection onJump={handleJump} />
+      <Grid />
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
@@ -78,9 +80,9 @@ const App = () => {
         <div
           style={{
             width: "100vw",
-            height: "800px",
+            height: "700px",
             position: "absolute",
-            top: 100,
+            top: 130,
           }}
         >
           <Threads
