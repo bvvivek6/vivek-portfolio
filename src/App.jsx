@@ -80,14 +80,14 @@ const App = () => {
         ? "w-[64px]"
         : "w-[50vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]"
     }
-    flex  z-20 px-4 py-2 justify-center  border backdrop-blur-md shadow-inner text-gray-900 font-sans text-sm  tracking-tight transition-all duration-300`}
+    flex  z-20 px-4 py-2  justify-center  border-y backdrop-blur shadow-inner text-gray-900 font-sans text-sm  tracking-tight transition-all duration-300`}
       >
         <motion.div
           className="overflow-hidden "
           initial={{ opacity: 0, scale: 3, filter: "blur(20px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
-          transition={{ type: "spring", stiffness: 70, damping: 20 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20 }}
         >
           Lines. Layers. Space.
         </motion.div>

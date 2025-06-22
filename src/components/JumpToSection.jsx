@@ -14,9 +14,9 @@ const JumpToSection = ({ onJump }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border text-black border-gray-200 rounded-full overflow-visible cursor-pointer ">
+    <div className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border-y text-black border-gray-200 rounded-full overflow-visible ">
       <button
-        className="w-10 h-10 flex  items-center justify-center text-xs font-light "
+        className="w-10 h-10 flex cursor-pointer items-center justify-center text-xs font-medium "
         onClick={() => setOpen((v) => !v)}
       >
         {open ? <HiOutlineX size={20} /> : <HiOutlineMenu size={20} />}
@@ -48,8 +48,8 @@ const JumpToSection = ({ onJump }) => {
             }}
             transition={{
               type: "spring",
-              stiffness: 120,
-              damping: 18,
+              stiffness: 260,
+              damping: 26,
             }}
           >
             {sectionList.map((section) => (

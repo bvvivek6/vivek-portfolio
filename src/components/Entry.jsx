@@ -96,7 +96,7 @@ const Entry = () => {
           >
             <FaInstagram
               size={26}
-              className="text-gray-500 hover:text-pink-600 transition"
+              className="text-gray-800 hover:text-pink-600 transition"
             />
           </a>
         </motion.div>
