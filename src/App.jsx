@@ -9,6 +9,7 @@ import Resume from "./components/Resume";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
 import { useState } from "react";
+import BlurText from "./components/BlurText";
 
 const sections = [
   {
@@ -74,7 +75,7 @@ const App = () => {
       <JumpToSection onJump={handleJump} />
       <Grid />
       <div
-        className={`absolute top-6 left-24 sm:left-32 md:left-1/2 transform md:-translate-x-1/2 h-10 rounded-full  overflow-visible border-gray-200
+        className={`absolute top-6 left-24 sm:left-32 md:left-1/2 transform md:-translate-x-1/2 h-10 rounded-full   border-gray-200
     ${
       open && isMobile
         ? "w-[64px]"
@@ -87,9 +88,9 @@ const App = () => {
           initial={{ opacity: 0, scale: 3, filter: "blur(20px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
-          transition={{ type: "spring", stiffness: 50, damping: 20 }}
+          transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
-          Lines. Layers. Space.
+          Layers. Lines. Space.
         </motion.div>
       </div>
 
@@ -131,7 +132,7 @@ const App = () => {
           />
         </div>
         <footer className="z-100">
-          <div className="flex items-center justify-center w-full h-16  text-gray-700 text-xs font-light">
+          <div className="flex items-center justify-center w-[150px] rounded-full backdrop-blur px-4 py-2 mb-2 font-sans text-gray-700 text-xs font-light">
             <span className="text-center">
               Crafted by{" "}
               <a

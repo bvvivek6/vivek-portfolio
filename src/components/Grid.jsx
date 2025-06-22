@@ -17,7 +17,7 @@ const Grid = () => {
               repeating-linear-gradient(0deg, transparent, transparent 37px, #bfc2c730 37px, #bfc2c730 39px, transparent 39px, transparent 76px),
               repeating-linear-gradient(90deg, transparent, transparent 37px, #bfc2c730 37px, #bfc2c730 39px, transparent 39px, transparent 76px)
             `,
-          backgroundSize: "40px 40px",
+          backgroundSize: "42px 44px",
           pointerEvents: "none",
         }}
       ></motion.div>
