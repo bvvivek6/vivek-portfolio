@@ -74,7 +74,7 @@ const App = () => {
       <JumpToSection onJump={handleJump} />
       <Grid />
       <div
-        className={`absolute top-6 left-24 sm:left-32 md:left-1/2 transform md:-translate-x-1/2 h-10 rounded-full overflow-visible border-gray-200
+        className={`absolute top-6 left-24 sm:left-32 md:left-1/2 transform md:-translate-x-1/2 h-10 rounded-full  overflow-visible border-gray-200
     ${
       open && isMobile
         ? "w-[64px]"
@@ -82,7 +82,15 @@ const App = () => {
     }
     flex  z-20 px-4 py-2 justify-center  border backdrop-blur-md shadow-inner text-gray-900 font-sans text-sm  tracking-tight transition-all duration-300`}
       >
-        <div className="overflow-hidden ">Lines. Layers. Space.</div>
+        <motion.div
+          className="overflow-hidden "
+          initial={{ opacity: 0, scale: 3, filter: "blur(20px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
+          transition={{ type: "spring", stiffness: 70, damping: 20 }}
+        >
+          Lines. Layers. Space.
+        </motion.div>
       </div>
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
