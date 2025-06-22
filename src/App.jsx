@@ -130,17 +130,17 @@ const App = () => {
             enableMouseInteraction={true}
           />
         </div>
-        <footer>
+        <footer className="z-100">
           <div className="flex items-center justify-center w-full h-16  text-gray-700 text-xs font-light">
             <span className="text-center">
               Crafted by{" "}
               <a
-                href="https://github.com/bvvivek6"
+                href="https://github.com/bvvivek6/vivek-portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" text-gray-900 font-light"
               >
-                Vivek
+                &lt;/Vivek&gt;
               </a>
             </span>
           </div>

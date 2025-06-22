@@ -60,7 +60,7 @@ const Entry = () => {
           >
             <FaGithub
               size={26}
-              className="text-gray-500 hover:text-black transition"
+              className="text-gray-800 hover:text-black transition"
             />
           </a>
           <a
@@ -72,7 +72,7 @@ const Entry = () => {
           >
             <FaBehance
               size={26}
-              className="text-gray-500 hover:text-blue-500 transition"
+              className="text-gray-800 hover:text-blue-500 transition"
             />
           </a>
           <a
@@ -84,7 +84,7 @@ const Entry = () => {
           >
             <FaLinkedin
               size={26}
-              className="text-gray-500 hover:text-blue-700 transition"
+              className="text-gray-800 hover:text-blue-700 transition"
             />
           </a>
           <a
