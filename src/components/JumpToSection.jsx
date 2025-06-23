@@ -14,13 +14,16 @@ const JumpToSection = ({ onJump }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border-y text-black border-gray-200 rounded-full overflow-visible ">
-      <button
+    <motion.divdiv
+      className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border-y text-black border-gray-200 rounded-full overflow-visible "
+      whileTap={{ scale: 0.8 }}
+    >
+      <motion.button
         className="w-10 h-10 flex cursor-pointer items-center justify-center text-xs font-medium "
         onClick={() => setOpen((v) => !v)}
       >
         {open ? <HiOutlineX size={20} /> : <HiOutlineMenu size={20} />}
-      </button>
+      </motion.button>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -68,7 +71,7 @@ const JumpToSection = ({ onJump }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.divdiv>
   );
 };
 
