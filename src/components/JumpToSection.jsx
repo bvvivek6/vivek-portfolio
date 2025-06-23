@@ -16,7 +16,18 @@ const JumpToSection = ({ onJump }) => {
   return (
     <motion.divdiv
       className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border-y text-black border-gray-200 rounded-full overflow-visible "
-      whileTap={{ scale: 0.8 }}
+      whileTap={{ scale: 0.9 }}
+      initial={{ x: -200 }}
+      animate={{ x: 0 }}
+      transition={{
+        x: {
+          type: "spring",
+          stiffness: 300,
+          damping: 50,
+          mass: 0.7,
+          delay: 0.8,
+        },
+      }}
     >
       <motion.button
         className="w-10 h-10 flex cursor-pointer items-center justify-center text-xs font-medium "
@@ -37,8 +48,8 @@ const JumpToSection = ({ onJump }) => {
             }}
             animate={{
               opacity: 1,
-              x: -20,
-              y: 20,
+              x: -17.5,
+              y: 23,
               scale: 1,
               filter: "blur(0px)",
             }}

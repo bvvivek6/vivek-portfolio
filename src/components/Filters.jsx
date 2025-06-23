@@ -16,16 +16,20 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
       {" "}
       <motion.div
         className={`fixed top-6 right-6 z-100 flex items-center h-10  backdrop-blur-lg shadow-inner border-y border-gray-200  rounded-full overflow-hidden cursor-pointer`}
-        initial={false}
-        whileTap={{ scale: 0.9 }}
-        animate={{
-          width: open ? 190 : 40,
-          transition: {
+        initial={{ x: 200 }}
+        animate={{ x: 0, width: open ? 190 : 40 }}
+        transition={{
+          x: {
             type: "spring",
-            stiffness: 260,
-            damping: 26,
+            stiffness: 300,
+            damping: 50,
+            mass: 0.7,
+            delay: 0.8,
           },
+          opacity: { duration: 0.4, delay: 0.2 },
+          width: { type: "spring", stiffness: 260, damping: 26 },
         }}
+        whileTap={{ scale: 0.9 }}
         onClick={toggleMenu}
       >
         <motion.div

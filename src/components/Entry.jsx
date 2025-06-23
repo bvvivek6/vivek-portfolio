@@ -34,7 +34,7 @@ const Entry = () => {
           />
         </motion.span>
         <motion.span
-          className="block md:text-2xl text-lg md:w-2xl font-sans text-center tracking-tight leading-tight"
+          className="block md:text-2xl text-md md:w-2xl font-sans text-center tracking-tight leading-tight"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ const Entry = () => {
       </h1>
       <div className="flex justify-start">
         <motion.div
-          className="flex flex-row  gap-4 mt-8"
+          className="flex flex-row  gap-4 mt-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
