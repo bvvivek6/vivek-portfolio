@@ -33,7 +33,30 @@ const JumpToSection = ({ onJump }) => {
         className="w-10 h-10 flex cursor-pointer items-center justify-center text-xs font-medium "
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? <HiOutlineX size={20} /> : <HiOutlineMenu size={20} />}
+        <motion.span
+          initial={false}
+          animate={{
+            opacity: open ? 0 : 1,
+            rotate: open ? 180 : 0,
+            filter: open ? "blur(5px)" : "blur(0px)",
+          }}
+          transition={{ duration: 0.4 }}
+          style={{ position: "absolute" }}
+        >
+          <HiOutlineMenu size={20} />
+        </motion.span>
+        <motion.span
+          initial={false}
+          animate={{
+            opacity: open ? 1 : 0,
+            rotate: open ? 0 : 180,
+            filter: open ? "blur(0px)" : "blur(5px)",
+          }}
+          transition={{ duration: 0.4 }}
+          style={{ position: "absolute" }}
+        >
+          <HiOutlineX size={20} />
+        </motion.span>
       </motion.button>
       <AnimatePresence>
         {open && (
