@@ -9,7 +9,6 @@ import Resume from "./components/Resume";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
 import { useState } from "react";
-import BlurText from "./components/BlurText";
 
 const sections = [
   {
@@ -74,12 +73,13 @@ const App = () => {
       />
       <JumpToSection onJump={handleJump} />
       <Grid />
-      <div
+      <motion.div
         className={`absolute top-6 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
     flex z-20 px-4 py-2 justify-center border-y backdrop-blur shadow-inner text-gray-900 font-sans text-sm tracking-tight transition-all duration-300
     ${open && isMobile ? "bg-white/60 blur-[2px] scale-80" : "bg-transparent"}
     ${!isMobile ? "w-[50vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]" : ""}
     `}
+        whileTap={{ scale: 0.9 }}
       >
         <motion.div
           className="overflow-hidden "
@@ -90,7 +90,7 @@ const App = () => {
         >
           Layers. Lines. Space.
         </motion.div>
-      </div>
+      </motion.div>
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
         <main className="flex-1 flex items-center justify-center relative w-full h-full min-h-0">
