@@ -34,6 +34,7 @@ const App = () => {
   const [filterIdx, setFilterIdx] = useState(0);
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const toggleMenu = () => setOpen((v) => !v);
 
   //check window size
@@ -58,6 +59,14 @@ const App = () => {
     }
   };
 
+  React.useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMouse({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <motion.div
       className="relative w-full h-screen"
@@ -65,6 +74,22 @@ const App = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
+      <motion.div
+        style={{
+          position: "fixed",
+          left: mouse.x - 10,
+          top: mouse.y - 10,
+          width: 20,
+          height: 20,
+          borderRadius: "50%",
+          background: "#00000040",
+          pointerEvents: "none",
+          zIndex: 9999,
+        }}
+        animate={{ left: mouse.x - 15, top: mouse.y - 15 }}
+        transition={{ type: "spring", stiffness: 300, damping: 40 }}
+        className="hidden md:block"
+      />
       <Filters
         filterIdx={filterIdx}
         setFilterIdx={setFilterIdx}
