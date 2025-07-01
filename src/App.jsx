@@ -69,9 +69,13 @@ const App = () => {
   }, []);
 
   React.useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/bvvivek/portfolio")
+    fetch("https://api.countapi.xyz/hit/vivek-me.vercel.app/visits")
       .then((res) => res.json())
-      .then((data) => setVisitCount(data.value));
+      .then((data) => setVisitCount(data.value))
+      .catch((error) => {
+        console.error("Error fetching visit count:", error);
+        setVisitCount(null);
+      });
   }, []);
 
   return (
