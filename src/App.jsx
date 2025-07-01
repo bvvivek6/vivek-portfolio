@@ -35,6 +35,7 @@ const App = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [visitCount, setVisitCount] = useState(null);
   const toggleMenu = () => setOpen((v) => !v);
 
   //check window size
@@ -65,6 +66,12 @@ const App = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  React.useEffect(() => {
+    fetch("https://api.countapi.xyz/hit/bvvivek/portfolio")
+      .then((res) => res.json())
+      .then((data) => setVisitCount(data.value));
   }, []);
 
   return (
@@ -164,7 +171,7 @@ const App = () => {
                 rel="noopener noreferrer"
                 className=" text-gray-900 font-light"
               >
-                &lt;/Vivek&gt;
+                &lt;/Vivek&gt; {visitCount !== null ? `(${visitCount})` : ""}
               </a>
             </span>
           </div>
