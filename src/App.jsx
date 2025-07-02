@@ -35,7 +35,6 @@ const App = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-  const [visitCount, setVisitCount] = useState(0);
   const toggleMenu = () => setOpen((v) => !v);
 
   //check window size
@@ -66,16 +65,6 @@ const App = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  React.useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/vivek-me.vercel.app/visits")
-      .then((res) => res.json())
-      .then((data) => setVisitCount(data.value))
-      .catch((error) => {
-        console.error("Error fetching visit count:", error);
-        setVisitCount(null);
-      });
   }, []);
 
   return (
@@ -178,11 +167,6 @@ const App = () => {
                 &lt;/Vivek&gt;
               </a>
             </span>
-            {visitCount !== null && (
-              <span className="block text-xs text-gray-900 mx-2">
-                : {visitCount}
-              </span>
-            )}
           </div>
         </footer>
       </div>
