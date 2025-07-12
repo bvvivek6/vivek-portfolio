@@ -14,21 +14,21 @@ const projects = [
       "Nodemailer",
       "Cloudinary",
     ],
-    github: "",
+    github: "https://github.com/bvvivek6/Time-Capsule",
     demo: "",
-    image: "timecapsule.png",
+    image: "/images/timecapsule.png",
   },
   {
     title: "AlgoFlow",
     description:
       "An interactive web app to visualize and learn sorting algorithms with step-by-step animations and pseudocode. Integrates dynamic resource suggestions using YouTube Data V3 API and features a modern, responsive UI.",
     techStack: ["React.js", "Tailwind CSS"],
-    github: "",
-    demo: "",
-    image: "algoflow.png",
+    github: "https://github.com/bvvivek6/Algoflow",
+    demo: "https://learn-algo-v1.vercel.app/",
+    image: "/images/algoflow.png",
   },
   {
-    title: "Snapster",
+    title: "Snapsture",
     description:
       "A fun and interactive photo booth app with real-time webcam capture, creative filters, countdown timer, collage generation, and download functionality. Features sleek animations using framer motion.",
     techStack: [
@@ -38,9 +38,9 @@ const projects = [
       "WebRTC",
       "framer-motion",
     ],
-    github: "",
-    demo: "",
-    image: "snapster.png",
+    github: "https://github.com/bvvivek6/Snapsture",
+    demo: "https://snapture-me.vercel.app/",
+    image: "/images/snapture.png",
   },
 ];
 

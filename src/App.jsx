@@ -5,6 +5,7 @@ import Threads from "./components/Threads";
 import Filters from "./components/Filters";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
@@ -22,6 +23,10 @@ const sections = [
   {
     key: "experience",
     content: <Experience />,
+  },
+  {
+    key: "projects",
+    content: <Projects />,
   },
   {
     key: "resume",

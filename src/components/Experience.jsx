@@ -5,10 +5,10 @@ const Experience = () => {
   return (
     <section className="flex flex-col items-center justify-center mt-20 h-full w-full py-12 font-sans">
       <div className="w-[95vw] md:w-[50vw] p-6 flex flex-col items-start space-y-2">
-        <h2 className="text-2xl font-light tracking-tight  text-gray-900 self-center">
+        <h2 className="text-2xl font-light tracking-tighter text-gray-900 self-center">
           Experience
         </h2>
-        <div className="max-h-[50vh] overflow-y-auto w-full backdrop-blur my-4  rounded-2xl">
+        <div className="max-h-[50vh] overflow-y-auto w-full backdrop-blur my-2  rounded-2xl">
           {experienceData.map((exp, idx) => (
             <div
               key={idx}
@@ -21,11 +21,11 @@ const Experience = () => {
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              <div className="flex flex-col space-y-2 w-full">
-                <div>
-                  <span className="text-lg leading-tight tracking-tight font-medium text-gray-800">
+              <div className="flex flex-col space-y-3 w-full">
+                <div className="flex flex-col space-y-2">
+                  <div className="text-lg leading-tight tracking-tighter font-medium text-gray-800">
                     {exp.role}
-                  </span>
+                  </div>
                   <div className="text-md tracking-tight text-gray-600">
                     {exp.company}
                   </div>

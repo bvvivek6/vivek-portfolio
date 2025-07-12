@@ -73,7 +73,6 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
           )}
         </motion.div>
       </motion.div>
-      {/* Overlay Filter */}
       {filterIdx !== 0 && (
         <div
           className={`pointer-events-none fixed inset-0 z-75 transition-all duration-300 ${filters[filterIdx].className}`}
