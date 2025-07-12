@@ -8,11 +8,11 @@ const Projects = () => {
         <h2 className="text-2xl font-light tracking-tighter  self-center">
           My Projects
         </h2>
-        <div className="max-h-[58vh] md:max-h-[60vh] overflow-y-auto w-full backdrop-blur rounded-2xl">
+        <div className="max-h-[58vh] md:max-h-[60vh]  overflow-y-auto w-full rounded-2xl">
           {projects.map((project, idx) => (
             <div
               key={project.title + idx}
-              className="flex flex-col w-full mb-4 rounded-2xl border border-gray-200 "
+              className="flex flex-col w-full mb-4 backdrop-blur rounded-2xl border border-gray-300"
             >
               {project.image && (
                 <div className="w-full h-50 md:h-70 rounded-2xl overflow-hidden bg-gray-100">
@@ -61,11 +61,11 @@ const Projects = () => {
                   <strong className="block mb-1 tracking-tight text-xs text-gray-500">
                     Tech Stack:
                   </strong>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
+                  <div className="flex flex-wrap gap-1">
                     {project.techStack.map((tech, index) => (
                       <span
                         key={index}
-                        className="inline-block px-3 py-1 border border-gray-200 backdrop-blur-2xl  text-gray-700 rounded-full text-xs "
+                        className=" px-4 py-1.5 inline-block text-center border border-[#a7a7a7]  backdrop-blur-2xl  text-gray-700 rounded-full text-xs "
                       >
                         {tech}
                       </span>
