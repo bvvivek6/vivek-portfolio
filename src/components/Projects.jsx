@@ -15,7 +15,7 @@ const Projects = () => {
               className="flex flex-col w-full mb-4 rounded-2xl border border-gray-200 "
             >
               {project.image && (
-                <div className="w-full h-52 md:h-72 rounded-2xl overflow-hidden bg-gray-100">
+                <div className="w-full h-50 md:h-70 rounded-2xl overflow-hidden bg-gray-100">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -31,7 +31,7 @@ const Projects = () => {
                   {project.description}
                 </div>
                 <div className="mt-4">
-                  <strong className="block mb-1 text-xs text-gray-500">
+                  <strong className="block mb-1 tracking-tight text-xs text-gray-500">
                     Links:
                   </strong>
                   <div className="flex flex-row gap-4">
@@ -58,14 +58,14 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <strong className="block mb-1 text-xs text-gray-500">
+                  <strong className="block mb-1 tracking-tight text-xs text-gray-500">
                     Tech Stack:
                   </strong>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
                     {project.techStack.map((tech, index) => (
                       <span
                         key={index}
-                        className="inline-block px-3 py-1 border border-gray-200  text-gray-700 rounded-full text-xs font-medium "
+                        className="inline-block px-3 py-1 border border-gray-200 backdrop-blur-2xl  text-gray-700 rounded-full text-xs "
                       >
                         {tech}
                       </span>
