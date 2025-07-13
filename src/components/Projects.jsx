@@ -12,7 +12,7 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={project.title + idx}
-              className="flex flex-col w-full mb-4 backdrop-blur rounded-2xl border border-gray-300"
+              className="flex flex-col w-full mb-4 backdrop-blur rounded-2xl border border-gray-300 border-b-2"
             >
               {project.image && (
                 <div className="w-full h-42 md:h-70 rounded-2xl overflow-hidden bg-gray-100">
