@@ -3,16 +3,16 @@ import projects from "../constants/projects";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-center mt-42 md:mt-30 h-full w-full  font-sans">
-      <div className="w-[95vw] md:w-[40vw] px-6 flex flex-col items-start space-y-2">
+    <section className="flex flex-col items-center justify-center mt-20 h-full w-full  font-sans">
+      <div className="w-[95vw] md:w-[40vw] px-7 flex flex-col items-start space-y-2">
         <h2 className="text-2xl font-light tracking-tighter  self-center">
           My Projects
         </h2>
-        <div className="max-h-[58vh] md:max-h-[60vh]  overflow-y-auto w-full rounded-2xl">
+        <div className="max-h-[60vh] md:max-h-[60vh]  overflow-y-auto w-full rounded-2xl">
           {projects.map((project, idx) => (
             <div
               key={project.title + idx}
-              className="flex flex-col w-full mb-4 backdrop-blur rounded-2xl border border-gray-300 border-b-2"
+              className="flex flex-col w-full mb-4 backdrop-blur rounded-2xl border border-gray-300"
             >
               {project.image && (
                 <div className="w-full h-42 md:h-70 rounded-2xl overflow-hidden bg-gray-100">
