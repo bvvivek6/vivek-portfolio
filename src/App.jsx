@@ -76,7 +76,7 @@ const App = () => {
         toggleMenu={toggleMenu}
       />
       <JumpToSection onJump={handleJump} />
-      <Grid />
+      {/* <Grid /> */}
       <motion.div
         className={`absolute top-6 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
     flex z-20 px-4 py-2 justify-center border-y backdrop-blur shadow-inner text-gray-900 font-sans text-sm tracking-tight transition-all duration-300
