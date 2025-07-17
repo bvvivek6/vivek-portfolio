@@ -12,7 +12,7 @@ const Experience = () => {
           {experienceData.map((exp, idx) => (
             <div
               key={idx}
-              className="flex border backdrop-blur border-gray-300 flex-row w-full gap-4 p-4 mb-4 rounded-2xl "
+              className="flex border backdrop-blur border-gray-300 flex-row w-full gap-4 p-3 py-8 mb-4 rounded-2xl "
             >
               <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-gray-500 text-sm ">
                 <img
@@ -21,7 +21,7 @@ const Experience = () => {
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              <div className="flex flex-col space-y-3 w-full">
+              <div className="flex flex-col space-y-2 w-full">
                 <div className="flex flex-col space-y-2">
                   <div className="text-lg leading-tight tracking-tighter font-medium text-gray-800">
                     {exp.role}
