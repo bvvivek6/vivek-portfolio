@@ -8,11 +8,11 @@ const Experience = () => {
         <h2 className="text-2xl font-light tracking-tighter text-gray-900 self-center">
           Experience
         </h2>
-        <div className="max-h-[50vh] overflow-y-auto w-full backdrop-blur my-2  rounded-2xl">
+        <div className="max-h-[50vh] overflow-y-auto w-full  my-2 rounded-2xl">
           {experienceData.map((exp, idx) => (
             <div
               key={idx}
-              className="flex flex-row w-full gap-4 p-4 rounded-2xl "
+              className="flex border backdrop-blur border-gray-300 flex-row w-full gap-4 p-4 mb-4 rounded-2xl "
             >
               <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-gray-500 text-sm ">
                 <img
