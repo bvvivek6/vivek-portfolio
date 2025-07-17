@@ -1,4 +1,3 @@
-// Experience data template for mapping in Experience.jsx
 const experienceData = [
   {
     logo: "https://github.com/fauxigent.png",
@@ -8,7 +7,25 @@ const experienceData = [
     highlights: [
       "Designed and developed UIs for 15+ projects including e-commerce platforms, dashboards, and portfolios.",
       "Improved user satisfaction by up to 30%-50% through client collaboration and user-centered design.",
-      "Key work includes interfaces for Anand Brothers, SK Jewellers, Smarthr Pro, and Fauxigent portfolio.",
+      "Key work includes interfaces for: ",
+    ],
+    links: [
+      {
+        name: "AnandBrothers, Mysuru",
+        url: "https://anandbrothersmysuru.in/",
+      },
+      {
+        name: "SK jewellers, Mysuru",
+        url: "https://srikrishnaajewellers.in",
+      },
+      {
+        name: "Smart HR pro",
+        url: "https://www.smarthrpro.in",
+      },
+      {
+        name: "Fauxigent Innovations",
+        url: "https://www.fauxigent.com",
+      },
     ],
   },
   {
@@ -18,7 +35,17 @@ const experienceData = [
     period: "Oct 2024 – Present",
     highlights: [
       "Played a key role in designing and developing the official DSC website featuring community initiatives, events, blog posts with a responsive and modern user interface.",
-      "Built a responsive Open Day Tour App 2 for virtual and real-time campus navigation using React.js, Tailwind CSS, and Mapbox GL JS, featuring dynamic maps, geofencing, and guided tours.",
+      "Built a responsive Open Day Tour App for virtual and real-time campus navigation using React.js, Tailwind CSS, and Mapbox GL JS, featuring dynamic maps, geofencing, and guided tours.",
+    ],
+    links: [
+      {
+        name: "DSC JSSSTU Website",
+        url: "https://dscjssstuniv.in/",
+      },
+      {
+        name: "Open Day Tour App",
+        url: "https://opendaytour.netlify.app/",
+      },
     ],
   },
 ];

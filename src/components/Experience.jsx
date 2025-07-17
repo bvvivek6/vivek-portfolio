@@ -38,6 +38,17 @@ const Experience = () => {
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
+                <div className="gap-2 text-xs text-gray-600">
+                  {exp.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      className="text-blue-500 pr-2 hover:underline"
+                    >
+                      {link.name},
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
