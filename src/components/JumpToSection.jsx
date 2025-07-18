@@ -15,8 +15,8 @@ const JumpToSection = ({ onJump }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.divdiv
-      className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-inner backdrop-blur-lg border-y text-black border-gray-200 rounded-full overflow-visible "
+    <motion.div
+      className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-md shadow-[#efefef] backdrop-blur-[2px] border-y text-black border-gray-200 rounded-full overflow-visible "
       whileTap={{ scale: 0.9 }}
       initial={{ x: -200 }}
       animate={{ x: 0 }}
@@ -106,7 +106,7 @@ const JumpToSection = ({ onJump }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.divdiv>
+    </motion.div>
   );
 };
 

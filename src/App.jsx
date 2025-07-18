@@ -79,9 +79,9 @@ const App = () => {
       <Grid />
       <motion.div
         className={`absolute top-6 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
-    flex z-20 px-4 py-2 justify-center border-y backdrop-blur shadow-inner text-gray-900 font-sans text-sm tracking-tight transition-all duration-300
-    ${open && isMobile ? "bg-white/60 blur-[2px] scale-85" : ""}
-    ${!isMobile ? "w-[50vw] " : ""}
+    flex z-20 px-6 py-2 justify-center border-y backdrop-blur-[2px] shadow-md  shadow-[#efefef] text-[#252525] font-sans text-sm tracking-tight transition-all duration-300
+    ${open && isMobile ? "bg-white/60 blur-[2px] scale-80" : "bg-transparent"}
+    ${!isMobile ? "w-[50vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]" : ""}
     `}
         whileTap={{ scale: 0.9 }}
       >
@@ -90,12 +90,7 @@ const App = () => {
           initial={{ opacity: 0, scale: 3, filter: "blur(20px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
-          transition={{
-            delay: 0.5,
-            type: "spring",
-            stiffness: 50,
-            damping: 10,
-          }}
+          transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
           Layers. Lines. Space.
         </motion.div>
