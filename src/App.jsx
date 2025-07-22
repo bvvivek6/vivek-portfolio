@@ -64,7 +64,7 @@ const App = () => {
 
   return (
     <motion.div
-      className="relative w-full h-screen"
+      className="relative w-full font h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -79,9 +79,9 @@ const App = () => {
       <Grid />
       <motion.div
         className={`absolute top-6 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
-    flex z-20 px-6 py-2 justify-center border-y backdrop-blur-[2px] shadow-md  shadow-[#efefef] text-[#252525] font-sans text-sm tracking-tight transition-all duration-300
+    flex z-20 px-6 py-2 justify-center border-y backdrop-blur-[2px] shadow-md items-center shadow-[#efefef] text-[#252525] font-sans md:text-sm text-[12px] tracking-tight transition-all duration-300
     ${open && isMobile ? "bg-white/60 blur-[2px] scale-80" : "bg-transparent"}
-    ${!isMobile ? "w-[50vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]" : ""}
+    ${!isMobile ? "w-[55vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]" : ""}
     `}
         whileTap={{ scale: 0.9 }}
       >
@@ -92,7 +92,7 @@ const App = () => {
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
           transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
-          Layers. Lines. Space.
+          ssh -Y vivek@portfolio
         </motion.div>
       </motion.div>
 
@@ -127,11 +127,11 @@ const App = () => {
             top: 130,
           }}
         >
-          <Threads
+          {/* <Threads
             amplitude={0.5}
             distance={0.2}
             enableMouseInteraction={true}
-          />
+          /> */}
         </div>
         <footer className="z-100">
           <div className="flex flex-row items-center justify-center w-[200px] rounded-full backdrop-blur px-4 py-2 mb-2 font-sans text-gray-700 text-xs font-light">

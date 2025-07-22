@@ -55,8 +55,8 @@ const skills = [
 const Skills = () => {
   return (
     <div className="w-full flex flex-col  items-center font-sans mt-4 mb-4">
-      <h2 className="text-2xl font-light mb-6 tracking-tighter text-gray-900">
-        Skills
+      <h2 className="text-xl font-light mb-6 font-mono tracking-tighter text-gray-900">
+        :~$ ls Skills
       </h2>
       <div className="relative w-full max-w-2xl">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 items-center justify-center w-full">

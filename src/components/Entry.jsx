@@ -26,7 +26,7 @@ const Entry = () => {
           custom={1}
         >
           <BlurText
-            text=">_ Hi there, I'm Vivek"
+            text="Hi there, I'm Vivek"
             delay={200}
             animateBy="words"
             direction="top"

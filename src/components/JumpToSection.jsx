@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import { HiOutlineX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { Terminal } from "lucide-react";
 const sectionList = [
   { key: "about", label: "Overview" },
   { key: "skills", label: "Skills" },
@@ -44,7 +44,7 @@ const JumpToSection = ({ onJump }) => {
           transition={{ duration: 0.4 }}
           style={{ position: "absolute" }}
         >
-          <HiOutlineMenu size={20} />
+          <Terminal size={20} color="#000000" />
         </motion.span>
         <motion.span
           initial={false}
