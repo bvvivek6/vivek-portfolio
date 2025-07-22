@@ -63,9 +63,9 @@ const Skills = () => {
           {skills.map((skill, idx) => (
             <span
               key={idx}
-              className="flex items-center gap-1  px-3 py-2 rounded-2xl bg-white/10 backdrop-blur border border-gray-200 text-gray-800 text-sm font-medium justify-center "
+              className="flex items-center gap-1  px-3 py-2 rounded-xl bg-white/10 backdrop-blur border border-gray-200 text-gray-800 text-sm font-medium justify-center "
             >
-              {skill.icon} {skill.label}
+              {skill.icon} &lt;{skill.label}&gt;
             </span>
           ))}
         </div>

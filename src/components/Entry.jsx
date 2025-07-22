@@ -26,7 +26,7 @@ const Entry = () => {
           custom={1}
         >
           <BlurText
-            text="Hi there, I'm Vivek"
+            text=">_ Hi there, I'm Vivek"
             delay={200}
             animateBy="words"
             direction="top"
@@ -41,7 +41,8 @@ const Entry = () => {
           custom={2}
         >
           Bridging design and code as a UI/UX designer turned developer, I craft
-          seamless user experiences with clean, functional code.
+          seamless user experiences with clean, functional{" "}
+          <span className="font-mono text-gray-800">&lt;code&gt;</span>.
         </motion.span>
       </h1>
       <div className="flex justify-start">

@@ -62,7 +62,7 @@ const JumpToSection = ({ onJump }) => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute top-7 left-6 grid grid-cols-2 min-w-[220px] gap-1 "
+            className="absolute top-7 left-6 grid grid-cols-2 min-w-[280px] gap-1 "
             initial={{
               opacity: 0.3,
               x: -120,
@@ -94,13 +94,13 @@ const JumpToSection = ({ onJump }) => {
               <button
                 key={section.key}
                 className="text-center px-4 py-2 font-sans shadow-inner
-           tracking-tight bg-[#ffffff] text-sm rounded-2xl border border-gray-200 hover:bg-gray-200 w-full text-gray-900"
+           tracking-normal bg-[#ffffff] text-sm rounded-xl border border-gray-200 hover:bg-gray-200 w-full text-gray-900"
                 onClick={() => {
                   setOpen(false);
                   if (onJump) onJump(section.key);
                 }}
               >
-                {section.label}
+                cd {section.label}
               </button>
             ))}
           </motion.div>
