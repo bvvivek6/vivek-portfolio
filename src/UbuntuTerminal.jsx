@@ -5,7 +5,25 @@ const fs = {
   "/": {
     about: `Hi there, I'm Vivek! Bridging design and code as a UI/UX designer turned developer, I craft seamless user experiences with clean, functional <code>.`,
     skills: `React, Node.js, MongoDB, Figma, Tailwind CSS, Express.js, JWT Auth, REST APIs, Git, GitHub`,
-    experience: `Experience:\n\n1. UI/UX Designer & Frontend Developer\n   Company: Fauxigent Innovations, Mysuru\n   Period: Dec 2024 – Present (Part-time)\n   Highlights:\n     - Designed and developed UIs for 15+ projects including e-commerce platforms, dashboards, and portfolios.\n     - Improved user satisfaction by up to 30%-50% through client collaboration and user-centered design.\n     - Key work includes interfaces for: AnandBrothers, Mysuru (https://anandbrothersmysuru.in/), SK jewellers, Mysuru (https://srikrishnaajewellers.in), Smart HR pro (https://www.smarthrpro.in), Fauxigent Innovations (https://www.fauxigent.com)\n\n2. UI/UX Designer\n   Company: Developer Student Club, JSSSTU\n   Period: Oct 2024 – Present\n   Highlights:\n     - Played a key role in designing and developing the official DSC website featuring community initiatives, events, blog posts with a responsive and modern user interface.\n     - Built a responsive Open Day Tour App for virtual and real-time campus navigation using React.js, Tailwind CSS, and Mapbox GL JS, featuring dynamic maps, geofencing, and guided tours.\n     - DSC JSSSTU Website: https://dscjssstuniv.in/\n     - Open Day Tour App: https://opendaytour.netlify.app/\n`,
+    experience: `Experience:
+
+1. UI/UX Designer & Frontend Developer  
+   Fauxigent Innovations, Mysuru (Dec 2024 – Present)  
+   - Designed UIs for 15+ projects (e-commerce, dashboards, portfolios)  
+   - Boosted user satisfaction by 30–50%  
+   - Notable:  
+     • AnandBrothers – https://anandbrothersmysuru.in/  
+     • SK Jewellers – https://srikrishnaajewellers.in  
+     • Smart HR Pro – https://www.smarthrpro.in  
+     • Fauxigent – https://www.fauxigent.com
+
+2. UI/UX Designer  
+   Developer Student Club, JSSSTU (Oct 2024 – Present)  
+   - Designed official DSC website: https://dscjssstuniv.in/  
+   - Built Open Day Tour App: https://opendaytour.netlify.app/  
+   - Features: responsive UI, geofencing, Mapbox GL JS, real-time nav
+`,
+
     projects: {
       TimeCapsule: `Time Capsule\nA full-stack digital vault enabling users to securely store and schedule the delivery of text, images, and videos. Features user authentication, media uploads, timed content access, and email reminders for engagement.\nGitHub: https://github.com/bvvivek6/Time-Capsule`,
       AlgoFlow: `AlgoFlow\nAn interactive web app to visualize and learn sorting algorithms with step-by-step animations and pseudocode. Integrates dynamic resource suggestions using YouTube Data V3 API and features a modern, responsive UI.\nDemo: https://learn-algo-v1.vercel.app/\nGitHub: https://github.com/bvvivek6/Algoflow`,
@@ -99,7 +117,7 @@ const Terminal = ({ onExit }) => {
       }
 
       case "clear":
-        setOutput([]);
+        setOutput(["Terminal cleared. Type 'help' for commands."]);
         return;
 
       case "exit":
@@ -126,7 +144,7 @@ const Terminal = ({ onExit }) => {
 
   return (
     <motion.div
-      className="bg-[#000000] text-[#e0e0e0] min-h-0 h-[100dvh] p-2 flex flex-col tracking-tight text-sm md:text-lg font-mono"
+      className="bg-[#000000] text-[#e0e0e0] min-h-0 h-[100dvh] p-2 flex flex-col tracking-tight text-xs md:text-lg font-mono"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       style={{ minHeight: 0, height: "100dvh" }}
