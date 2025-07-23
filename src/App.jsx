@@ -10,6 +10,7 @@ import Resume from "./components/Resume";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
 import { useState } from "react";
+import { Terminal } from "lucide-react";
 
 const sections = [
   {
@@ -86,12 +87,13 @@ const App = () => {
         whileTap={{ scale: 0.9 }}
       >
         <motion.div
-          className="overflow-hidden "
+          className="overflow-hidden flex items-center justify-center gap-1"
           initial={{ opacity: 0, scale: 3, filter: "blur(20px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
           transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
+          <Terminal size={12} />
           ssh -Y vivek@portfolio
         </motion.div>
       </motion.div>
