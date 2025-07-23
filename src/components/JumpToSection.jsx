@@ -44,7 +44,7 @@ const JumpToSection = ({ onJump }) => {
           transition={{ duration: 0.4 }}
           style={{ position: "absolute" }}
         >
-          <Terminal size={20} color="#000000" />
+          <HiOutlineMenu size={20} color="#000000" />
         </motion.span>
         <motion.span
           initial={false}
