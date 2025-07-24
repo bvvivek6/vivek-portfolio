@@ -3,7 +3,7 @@ import projects from "../constants/projects";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-24 h-full w-full  font-sans">
+    <section className="flex flex-col items-center justify-center mt-20 h-full w-full  font-sans">
       <div className="w-[95vw] md:w-[40vw] px-7 flex flex-col items-start space-y-2">
         <h2 className="text-xl font-light tracking-tighter font-mono self-center">
           :~$ ls My_Projects

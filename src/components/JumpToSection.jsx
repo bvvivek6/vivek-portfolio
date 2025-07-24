@@ -62,7 +62,7 @@ const JumpToSection = ({ onJump }) => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute top-7 left-6 grid grid-cols-2 min-w-[280px] gap-1 "
+            className="absolute top-7 left-6 grid grid-cols-2 min-w-[220px] gap-1 "
             initial={{
               opacity: 0.3,
               x: -120,
@@ -100,7 +100,7 @@ const JumpToSection = ({ onJump }) => {
                   if (onJump) onJump(section.key);
                 }}
               >
-                cd {section.label}
+                {section.label}
               </button>
             ))}
           </motion.div>

@@ -94,15 +94,18 @@ const App = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <div className="fixed bottom-4 right-4 z-50">
+      <motion.div
+        className="fixed bottom-6 right-6 z-100"
+        whileTap={{ scale: 0.9 }}
+      >
         <button
-          className="bg-black backdrop-blur shadow-lg rounded-full p-2 flex items-center justify-center  transition"
+          className="flex items-center h-10 w-10 justify-center backdrop-blur shadow-md shadow-[#efefef] border-y border-gray-200  rounded-full overflow-hidden cursor-pointer"
           onClick={handleGoToTerminal}
           aria-label="Open Terminal"
         >
           <Terminal size={20} className="text-[#2dc203]" />
         </button>
-      </div>
+      </motion.div>
 
       <Filters
         filterIdx={filterIdx}

@@ -147,7 +147,7 @@ const Terminal = ({ onExit }) => {
       className="bg-[#000000] text-[#e0e0e0] min-h-0 h-[100dvh] p-2 flex flex-col tracking-tight text-xs md:text-lg font-mono"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      style={{ minHeight: 0, height: "100dvh" }}
+      transition={{ duration: 0.6 }}
     >
       <div
         className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden"
