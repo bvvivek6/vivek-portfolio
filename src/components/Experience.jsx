@@ -3,12 +3,12 @@ import experienceData from "../constants/experience";
 
 const Experience = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-20 h-full w-full py-12 font-sans">
+    <section className="flex flex-col items-center justify-center mt-15 h-full w-full py-12 font-sans">
       <div className="w-[95vw] md:w-[50vw] p-6 flex flex-col items-start space-y-2">
         <h2 className="text-xl font-light tracking-tighter font-mono text-gray-900 self-center">
           :~$ ls Experience
         </h2>
-        <div className="max-h-[50vh] overflow-y-auto w-full  my-2 rounded-2xl">
+        <div className="max-h-[52vh] overflow-y-auto w-full  my-2 rounded-2xl">
           {experienceData.map((exp, idx) => (
             <div
               key={idx}

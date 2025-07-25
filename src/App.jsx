@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Entry from "./components/Entry";
-import Threads from "./components/Threads";
 import Filters from "./components/Filters";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -95,15 +94,28 @@ const App = () => {
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <motion.div
-        className="fixed bottom-6 right-6 z-100"
-        whileTap={{ scale: 0.9 }}
+        className="fixed top-6 left-6 z-100"
+        initial={{ opacity: 0, x: -200 }}
+        animate={{ opacity: 1, x: 0, width: open ? 190 : 40 }}
+        transition={{
+          x: {
+            type: "spring",
+            stiffness: 300,
+            damping: 50,
+            mass: 0.7,
+            delay: 0.8,
+          },
+          opacity: { duration: 0.4, delay: 0.2 },
+          width: { type: "spring", stiffness: 260, damping: 26 },
+        }}
+        whileTap={{ scale: 0.85 }}
       >
         <button
           className="flex items-center h-10 w-10 justify-center backdrop-blur shadow-md shadow-[#efefef] border-y border-gray-200  rounded-full overflow-hidden cursor-pointer"
           onClick={handleGoToTerminal}
           aria-label="Open Terminal"
         >
-          <Terminal size={20} className="text-[#2dc203]" />
+          <Terminal size={20} className="text-[#000]" />
         </button>
       </motion.div>
 
@@ -147,28 +159,7 @@ const App = () => {
             position: "absolute",
             top: 130,
           }}
-        >
-          {/* <Threads
-            amplitude={0.5}
-            distance={0.2}
-            enableMouseInteraction={true}
-          /> */}
-        </div>
-        <footer className="z-100">
-          <div className="flex flex-row items-center justify-center w-[200px] rounded-full backdrop-blur px-4 py-2 mb-2 font-sans text-gray-700 text-xs font-light">
-            <span className="text-center">
-              Crafted by{" "}
-              <a
-                href="https://github.com/bvvivek6/vivek-portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" text-gray-900 font-light"
-              >
-                &lt;/Vivek&gt;
-              </a>
-            </span>
-          </div>
-        </footer>
+        ></div>
       </div>
 
       <style>{`

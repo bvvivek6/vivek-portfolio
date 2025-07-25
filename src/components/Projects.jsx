@@ -3,12 +3,12 @@ import projects from "../constants/projects";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-20 h-full w-full  font-sans">
+    <section className="flex flex-col items-center justify-center mt-10 h-full w-full  font-sans">
       <div className="w-[95vw] md:w-[40vw] px-7 flex flex-col items-start space-y-2">
         <h2 className="text-xl font-light tracking-tighter font-mono self-center">
           :~$ ls My_Projects
         </h2>
-        <div className="max-h-[58vh] md:max-h-[60vh]  overflow-y-auto w-full rounded-2xl">
+        <div className="max-h-[52vh] md:max-h-[60vh]  overflow-y-auto w-full rounded-2xl">
           {projects.map((project, idx) => (
             <div
               key={project.title + idx}

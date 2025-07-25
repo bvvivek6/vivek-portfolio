@@ -1,111 +1,50 @@
-import React, { useState } from "react";
-import { HiOutlineMenu } from "react-icons/hi";
-import { HiOutlineX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-import { Terminal } from "lucide-react";
+import {
+  FaUser,
+  FaCode,
+  FaBriefcase,
+  FaProjectDiagram,
+  FaFileAlt,
+} from "react-icons/fa";
 const sectionList = [
-  { key: "about", label: "Overview" },
-  { key: "skills", label: "Skills" },
-  { key: "experience", label: "Experience" },
-  { key: "projects", label: "Projects" },
-  { key: "resume", label: "Resume" },
+  { key: "about", label: "Overview", icon: <FaUser size={16} /> },
+  { key: "skills", label: "Skills", icon: <FaCode size={16} /> },
+  { key: "experience", label: "Experience", icon: <FaBriefcase size={16} /> },
+  { key: "projects", label: "Projects", icon: <FaProjectDiagram size={16} /> },
+  { key: "resume", label: "Resume", icon: <FaFileAlt size={16} /> },
 ];
 
 const JumpToSection = ({ onJump }) => {
-  const [open, setOpen] = useState(false);
-
   return (
     <motion.div
-      className="fixed top-6 left-6 z-50 flex items-center h-10  shadow-md shadow-[#efefef] backdrop-blur-[2px] border-y text-black border-gray-200 rounded-full overflow-visible "
-      whileTap={{ scale: 0.9 }}
-      initial={{ x: -200 }}
-      animate={{ x: 0 }}
+      className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-end justify-center px-1 py-1  backdrop-blur-[2px] border border-gray-200 rounded-full shadow-inner gap-2 max-w-[80vw] w-auto overflow-x-auto scrollbar-hide"
+      style={{ WebkitOverflowScrolling: "touch" }}
+      initial={{ y: 100 }}
+      animate={{ y: 0 }}
       transition={{
-        x: {
+        y: {
           type: "spring",
           stiffness: 300,
           damping: 50,
           mass: 0.7,
           delay: 0.8,
         },
+        opacity: { duration: 0.4, delay: 0.2 },
       }}
+      whileTap={{ scale: 0.85 }}
     >
-      <motion.button
-        className="w-10 h-10 flex cursor-pointer items-center justify-center text-xs font-medium "
-        onClick={() => setOpen((v) => !v)}
-      >
-        <motion.span
-          initial={false}
-          animate={{
-            opacity: open ? 0 : 1,
-            rotate: open ? 180 : 0,
-            filter: open ? "blur(5px)" : "blur(0px)",
-          }}
-          transition={{ duration: 0.4 }}
-          style={{ position: "absolute" }}
+      {sectionList.map((section) => (
+        <motion.button
+          key={section.key}
+          className="flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-100 transition"
+          onClick={() => onJump && onJump(section.key)}
+          aria-label={section.label}
         >
-          <HiOutlineMenu size={20} color="#000000" />
-        </motion.span>
-        <motion.span
-          initial={false}
-          animate={{
-            opacity: open ? 1 : 0,
-            rotate: open ? 0 : 180,
-            filter: open ? "blur(0px)" : "blur(5px)",
-          }}
-          transition={{ duration: 0.4 }}
-          style={{ position: "absolute" }}
-        >
-          <HiOutlineX size={20} />
-        </motion.span>
-      </motion.button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="absolute top-7 left-6 grid grid-cols-2 min-w-[220px] gap-1 "
-            initial={{
-              opacity: 0.3,
-              x: -120,
-              y: -50,
-              scale: 0.1,
-              filter: "blur(10px)",
-            }}
-            animate={{
-              opacity: 1,
-              x: -17.5,
-              y: 23,
-              scale: 1,
-              filter: "blur(0px)",
-            }}
-            exit={{
-              opacity: 0,
-              x: -120,
-              y: -50,
-              scale: 0.1,
-              filter: "blur(10px)",
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 26,
-            }}
-          >
-            {sectionList.map((section) => (
-              <button
-                key={section.key}
-                className="text-center px-4 py-2 font-sans shadow-inner
-           tracking-normal bg-[#ffffff] text-sm rounded-xl border border-gray-200 hover:bg-gray-200 w-full text-gray-900"
-                onClick={() => {
-                  setOpen(false);
-                  if (onJump) onJump(section.key);
-                }}
-              >
-                {section.label}
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <span className="text-gray-800 group-hover:text-black transition mb-0.5 md:mb-1">
+            {section.icon}
+          </span>
+        </motion.button>
+      ))}
     </motion.div>
   );
 };

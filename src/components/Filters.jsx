@@ -29,7 +29,7 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
           opacity: { duration: 0.4, delay: 0.2 },
           width: { type: "spring", stiffness: 260, damping: 26 },
         }}
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: 0.85 }}
         onClick={toggleMenu}
       >
         <motion.div
