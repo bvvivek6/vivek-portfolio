@@ -36,7 +36,7 @@ const JumpToSection = ({ onJump }) => {
       {sectionList.map((section) => (
         <motion.button
           key={section.key}
-          className="flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-100 transition"
+          className="flex flex-col items-center justify-center  cursor-pointerp-2 rounded-full hover:bg-gray-100 transition"
           onClick={() => onJump && onJump(section.key)}
           aria-label={section.label}
         >
