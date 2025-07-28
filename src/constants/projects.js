@@ -1,5 +1,21 @@
 const projects = [
   {
+    title: "Breathe Well",
+    description:
+      "A comprehensive web application that leverages machine learning and AI to help patients with cystic fibrosis manage their health. Features include automated lung X-ray analysis using PyTorch neural networks, real-time health monitoring dashboard with interactive charts, personalized dietary tracking",
+    techStack: [
+      "Python",
+      "Flask",
+      "OpenCV",
+      "PyTorch",
+      "React",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/CysticFibrosis25/CysticFibrosis",
+    demo: "",
+    image: "/images/breathewell.png",
+  },
+  {
     title: "Time Capsule",
     description:
       "A full-stack digital vault enabling users to securely store and schedule the delivery of text, images, and videos. Features user authentication, media uploads, timed content access, and email reminders for engagement.",
