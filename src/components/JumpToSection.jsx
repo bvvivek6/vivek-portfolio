@@ -1,17 +1,38 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  FaUser,
-  FaCode,
-  FaBriefcase,
-  FaProjectDiagram,
-  FaFileAlt,
-} from "react-icons/fa";
+  UserRound,
+  Code2,
+  Briefcase,
+  LayoutDashboard,
+  FileUser,
+} from "lucide-react";
+
 const sectionList = [
-  { key: "about", label: "Overview", icon: <FaUser size={16} /> },
-  { key: "skills", label: "Skills", icon: <FaCode size={16} /> },
-  { key: "experience", label: "Experience", icon: <FaBriefcase size={16} /> },
-  { key: "projects", label: "Projects", icon: <FaProjectDiagram size={16} /> },
-  { key: "resume", label: "Resume", icon: <FaFileAlt size={16} /> },
+  {
+    key: "about",
+    label: "Overview",
+    icon: <UserRound size={18} strokeWidth={2.2} />,
+  },
+  {
+    key: "skills",
+    label: "Skills",
+    icon: <Code2 size={18} strokeWidth={2.2} />,
+  },
+  {
+    key: "experience",
+    label: "Experience",
+    icon: <Briefcase size={18} strokeWidth={2.2} />,
+  },
+  {
+    key: "projects",
+    label: "Projects",
+    icon: <LayoutDashboard size={18} strokeWidth={2.2} />,
+  },
+  {
+    key: "resume",
+    label: "Resume",
+    icon: <FileUser size={18} strokeWidth={2.2} />,
+  },
 ];
 
 const JumpToSection = ({ onJump }) => {
@@ -36,11 +57,11 @@ const JumpToSection = ({ onJump }) => {
       {sectionList.map((section) => (
         <motion.button
           key={section.key}
-          className="flex flex-col items-center justify-center  cursor-pointer p-2 rounded-full hover:bg-gray-100 transition"
+          className="flex flex-col items-center justify-center cursor-pointer p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
           onClick={() => onJump && onJump(section.key)}
           aria-label={section.label}
         >
-          <span className="text-gray-800 group-hover:text-black transition mb-0.5 md:mb-1">
+          <span className="text-gray-800  transition-colors duration-200 mb-0.5 md:mb-1">
             {section.icon}
           </span>
         </motion.button>

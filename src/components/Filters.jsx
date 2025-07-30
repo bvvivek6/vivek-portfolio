@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { HiChevronRight } from "react-icons/hi";
 import { FaPalette } from "react-icons/fa";
+import { Blend } from "lucide-react";
 
 const filters = [
   { name: "Normal", className: "", color: "bg-gray-200" },
@@ -36,7 +37,7 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
           className="flex items-center justify-center w-10 h-10"
           initial={false}
         >
-          {open ? <HiChevronRight size={18} /> : <FaPalette size={16} />}
+          {open ? <HiChevronRight size={18} /> : <Blend size={16} />}
         </motion.div>
         <motion.div
           className="flex gap-2 items-center "
