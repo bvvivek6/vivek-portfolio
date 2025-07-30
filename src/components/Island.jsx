@@ -31,7 +31,6 @@ const Island = ({ open }) => {
           exit={{ opacity: 0, scale: 0.3, filter: "blur(10px)" }}
           transition={{ type: "spring", stiffness: 40, damping: 10 }}
         >
-          <Terminal size={12} />
           ssh -Y vivek@portfolio
         </motion.div>
       </motion.div>
