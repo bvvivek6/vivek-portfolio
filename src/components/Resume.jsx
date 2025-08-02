@@ -16,15 +16,6 @@ const Resume = () => {
         >
           View Resume
         </a>
-        <div className="mt-2 p-5 rounded-2xl  flex flex-col items-center w-full  animate-fadein">
-          <span className="font-mono text-xs mb-2 text-green-400">
-            <span className="text-black">Thank you for visiting! ;)</span>
-          </span>
-        </div>
-        <style>{`
-          @keyframes fadein { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-          .animate-fadein { animation: fadein 1.2s cubic-bezier(.4,0,.2,1); }
-        `}</style>
       </div>
     </div>
   );

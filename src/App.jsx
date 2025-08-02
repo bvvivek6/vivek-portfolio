@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
+import Stats from "./components/Stats";
 import JumpToSection from "./components/JumpToSection";
 import Grid from "./components/Grid";
 import { useState } from "react";
@@ -34,6 +35,10 @@ const sections = [
   {
     key: "resume",
     content: <Resume />,
+  },
+  {
+    key: "stats",
+    content: <Stats />,
   },
 ];
 

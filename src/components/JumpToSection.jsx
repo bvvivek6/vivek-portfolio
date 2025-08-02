@@ -5,6 +5,7 @@ import {
   Briefcase,
   LayoutDashboard,
   FileUser,
+  BarChart3,
 } from "lucide-react";
 
 const sectionList = [
@@ -32,6 +33,11 @@ const sectionList = [
     key: "resume",
     label: "Resume",
     icon: <FileUser size={18} strokeWidth={2.2} />,
+  },
+  {
+    key: "stats",
+    label: "Stats",
+    icon: <BarChart3 size={18} strokeWidth={2.2} />,
   },
 ];
 
