@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import UbuntuTerminal from "./UbuntuTerminal";
 import { Terminal } from "lucide-react";
 import Island from "./components/Island";
+import Threads from "./components/Threads";
 
 const sections = [
   {
@@ -162,17 +163,12 @@ const App = () => {
             width: "100vw",
             height: "700px",
             position: "absolute",
-            top: 130,
+            top: 140,
           }}
-        ></div>
+        >
+          <Threads amplitude={0.58} distance={0.17} />
+        </div>
       </div>
-
-      <style>{`
-        @keyframes fadein { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fadein { animation: fadein 1.2s cubic-bezier(.4,0,.2,1); }
-        @keyframes retract { 0% { opacity: 1; transform: translateY(0); } 80% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-32px); } }
-        .animate-retract { animation: retract 3.5s cubic-bezier(.4,0,.2,1) forwards; }
-      `}</style>
     </motion.div>
   );
 };
