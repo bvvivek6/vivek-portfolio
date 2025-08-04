@@ -42,7 +42,10 @@ const Entry = () => {
         >
           Bridging design and code as a UI/UX designer turned developer, I craft
           seamless user experiences with clean, functional{" "}
-          <span className="font-mono text-gray-800">&lt;code&gt;</span>.
+          <span className="font-medium text-xl text-gray-800 font-playfair italic">
+            &lt;/code&gt;
+          </span>
+          .
         </motion.span>
       </h1>
       <div className="flex justify-start">
