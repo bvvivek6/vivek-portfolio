@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaBehance } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaBehance,
+  FaEnvelope,
+} from "react-icons/fa";
 import BlurText from "./BlurText";
 
 const textVariants = {
@@ -101,6 +107,18 @@ const Entry = () => {
             <FaInstagram
               size={26}
               className="text-gray-800 hover:text-pink-600 transition"
+            />
+          </a>
+          <a
+            href="mailto:vivekbv242813@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Gmail"
+            className="hover:opacity-80 "
+          >
+            <FaEnvelope
+              size={26}
+              className="text-gray-800 hover:text-red-600 transition"
             />
           </a>
         </motion.div>
