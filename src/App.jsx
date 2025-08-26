@@ -158,7 +158,7 @@ const App = () => {
             ))}
           </div>
         </main>
-        <div
+        {/* <div
           style={{
             width: "100vw",
             height: "700px",
@@ -167,7 +167,7 @@ const App = () => {
           }}
         >
           <Threads amplitude={0.58} distance={0.17} />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
