@@ -36,7 +36,7 @@ const Entry = () => {
             delay={200}
             animateBy="words"
             direction="top"
-            className="text-3xl text-center font-sans tracking-tight  w-full justify-center"
+            className="text-4xl md:text-6xl text-center font-sans tracking-tight  w-full justify-center"
           />
         </motion.span>
         <motion.span

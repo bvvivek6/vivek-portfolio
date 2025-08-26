@@ -16,7 +16,7 @@ const Filters = ({ filterIdx, setFilterIdx, open, toggleMenu }) => {
     <div>
       {" "}
       <motion.div
-        className={`fixed top-6 right-6 z-100 flex items-center h-10  backdrop-blur shadow-md shadow-[#efefef] border-y border-gray-200  rounded-full overflow-hidden cursor-pointer`}
+        className={`fixed top-3 right-6 z-100 flex items-center h-10  backdrop-blur shadow-md shadow-[#efefef] border-y border-gray-200  rounded-full overflow-hidden cursor-pointer`}
         initial={{ opacity: 0, x: 200 }}
         animate={{ opacity: 1, x: 0, width: open ? 190 : 40 }}
         transition={{

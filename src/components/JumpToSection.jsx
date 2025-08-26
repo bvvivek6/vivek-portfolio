@@ -45,12 +45,12 @@ const JumpToSection = ({ onJump }) => {
   return (
     <div className="">
       <motion.div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 flex bg-black items-center justify-center w-full h-12 overflow-x-auto scrollbar-hide"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-50 flex bg-black items-center justify-center w-full h-12 overflow-hidden"
         style={{ WebkitOverflowScrolling: "touch" }}
       >
-        <div className="bg-white h-12 rounded-b-2xl flex-1"></div>
+        <div className="bg-white h-12 rounded-b-2xl rounded-br-3xl flex-1"></div>
         <div className="bg-white">
-          <div className="flex flex-row px-3 rounded-t-2xl h-12 items-center justify-center bg-black gap-1">
+          <div className="flex flex-row px-3 rounded-t-3xl h-12 items-center justify-center bg-black gap-1">
             {sectionList.map((section, index) => (
               <motion.button
                 key={section.key}
@@ -77,7 +77,7 @@ const JumpToSection = ({ onJump }) => {
           </div>
         </div>
 
-        <div className="bg-white rounded-b-2xl h-12 flex-1"></div>
+        <div className="bg-white rounded-b-2xl rounded-bl-3xl h-12 flex-1"></div>
       </motion.div>
     </div>
   );

@@ -17,7 +17,7 @@ const Island = ({ open }) => {
   return (
     <div>
       <motion.div
-        className={`fixed top-6 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
+        className={`fixed top-3 left-1/2 transform -translate-x-1/2 h-10 rounded-full border-gray-200
     flex z-20 px-6 py-2 justify-center border-y backdrop-blur-[2px] shadow-md items-center shadow-[#efefef] text-[#252525] font-sans md:text-sm text-[12px] tracking-tight transition-all duration-300
     ${open && isMobile ? "bg-white/60 blur-[2px] scale-80" : "bg-transparent"}
     ${!isMobile ? "w-[55vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw]" : ""}

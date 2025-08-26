@@ -94,13 +94,13 @@ const App = () => {
 
   return (
     <motion.div
-      className="relative w-full bg-white rounded-2xl"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      className="relative w-full bg-[#fff] rounded-2xl"
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <motion.div
-        className="fixed top-6 left-6 z-100"
+        className="fixed top-3 left-6 z-100"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0, width: open ? 190 : 40 }}
         transition={{
