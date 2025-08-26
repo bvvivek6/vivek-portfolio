@@ -50,7 +50,7 @@ const JumpToSection = ({ onJump }) => {
       >
         <div className="bg-white h-12 rounded-b-2xl rounded-br-3xl flex-1"></div>
         <div className="bg-white">
-          <div className="flex flex-row px-3 rounded-t-3xl h-12 items-center justify-center bg-black gap-1">
+          <div className="flex flex-row px-3 rounded-t-4xl h-12 items-center justify-center bg-black gap-1">
             {sectionList.map((section, index) => (
               <motion.button
                 key={section.key}
