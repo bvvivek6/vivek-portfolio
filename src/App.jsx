@@ -94,7 +94,7 @@ const App = () => {
 
   return (
     <motion.div
-      className="relative w-full font h-screen"
+      className="relative w-full bg-white rounded-2xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -132,7 +132,7 @@ const App = () => {
         toggleMenu={toggleMenu}
       />
       <JumpToSection onJump={handleJump} />
-      <Grid />
+      {/* <Grid /> */}
       <Island open={open} key={showTerminal ? "terminal" : "gui"} />
 
       <div className="relative dvh items-center  justify-center overflow-hidden font-grotesk flex flex-col z-0">
