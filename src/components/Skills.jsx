@@ -8,34 +8,30 @@ import {
   SiCplusplus,
   SiLinux,
   SiMysql,
+  SiDocker,
 } from "react-icons/si";
 import { MdOutlineSecurity } from "react-icons/md";
 import { BiCodeCurly, BiCube } from "react-icons/bi";
 
 const skills = [
-  // 🔹 Programming Languages
   { icon: <SiC className="text-blue-500 text-lg" />, label: "C" },
   { icon: <SiCplusplus className="text-blue-600 text-lg" />, label: "C++" },
 
-  // 🔹 Frontend (MERN)
   {
     icon: <SiJavascript className="text-yellow-400 text-lg" />,
     label: "JavaScript",
   },
   { icon: <FaReact className="text-sky-400 text-lg" />, label: "React.js" },
 
-  // 🔹 Backend (MERN)
   { icon: <FaNodeJs className="text-green-500 text-lg" />, label: "Node.js" },
   {
     icon: <SiExpress className="text-gray-700 text-lg" />,
     label: "Express.js",
   },
 
-  // 🔹 Databases
   { icon: <SiMongodb className="text-green-600 text-lg" />, label: "MongoDB" },
   { icon: <SiMysql className="text-blue-700 text-lg" />, label: "MySQL" },
 
-  // 🔹 Dev Tools / APIs / Security
   {
     icon: <BiCodeCurly className="text-emerald-600 text-lg" />,
     label: "REST APIs",
@@ -46,8 +42,12 @@ const skills = [
   },
   { icon: <FaGitAlt className="text-orange-500 text-lg" />, label: "Git" },
   { icon: <FaGithub className="text-black text-lg" />, label: "GitHub" },
+  { icon: <SiLinux className="text-black text-lg" />, label: "Linux" },
+  {
+    icon: <SiDocker className="text-blue-500 text-lg" />,
+    label: "Docker",
+  },
 
-  // 🔹 Design
   { icon: <FaFigma className="text-pink-500 text-lg" />, label: "Figma" },
   { icon: <BiCube className="text-purple-600 text-lg" />, label: "Spline" },
 ];

@@ -1,7 +1,7 @@
 const experienceData = [
   {
     logo: "https://github.com/fauxigent.png",
-    role: "UI/UX Designer & Frontend Developer",
+    role: "UI/UX Designer & MERN Developer",
     company: "Fauxigent Innovations, Mysuru",
     period: "Dec 2024 – Present (Part-time)",
     highlights: [
