@@ -3,7 +3,7 @@ const experienceData = [
     logo: "https://github.com/fauxigent.png",
     role: "UI/UX Designer & MERN Developer",
     company: "Fauxigent Innovations, Mysuru",
-    period: "Dec 2024 – Present (Part-time)",
+    period: "Dec 2024 – July 2024 (Internship)",
     highlights: [
       "Designed and developed UIs for 15+ projects including e-commerce platforms, dashboards, and portfolios.",
       "Improved user satisfaction by up to 30%-50% through client collaboration and user-centered design.",
