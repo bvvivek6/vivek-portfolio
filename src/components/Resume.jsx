@@ -9,7 +9,7 @@ const Resume = () => {
           :~$ ls My_Resume
         </h2>
         <a
-          href="/02JST22UCS019_BV_VIVEK_VISHWAKARMA.pdf"
+          href="/BV_VIVEK_VISHWAKARMA_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 dark:text-blue-400 underline mb-8"
