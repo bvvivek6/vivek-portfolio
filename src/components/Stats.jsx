@@ -12,11 +12,7 @@ const Stats = () => {
           alt="GitHub Streak"
           className=" w-[80%] md:w-[90%] max-w-[90%] mx-auto"
         />
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=bvvivek6&show_icons=true&hide_border=false&background=ffffff&theme=default_duo"
-          alt="GitHub Stats"
-          className=" w-[80%] md:w-[90%] max-w-[90%] mx-auto"
-        />
+
         <img
           src="https://leetcard.jacoblin.cool/vivek2406"
           alt="LeetCode Stats"
